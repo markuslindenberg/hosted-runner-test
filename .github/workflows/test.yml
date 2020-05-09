@@ -12,22 +12,21 @@ jobs:
       - name: Test stuff
         run: |
           echo "::stop-commands::ACbGa0XUVqRf9pHUWRbL"
-          pwd
-          echo --------------------------------
-          mount
           echo --------------------------------
           df -h
           echo --------------------------------
-          docker images -a
-          echo --------------------------------
-          snap list --all
-          echo --------------------------------
-          echo /usr
-          sudo du -sh /usr/*
-          echo /opt
-          sudo du -sh /opt/*
-          echo /var
-          sudo du -sh /var/*
+          echo /usr/local
+          sudo du -sh /usr/local/*
+          echo /usr/share
+          sudo du -sh /usr/share/*
+          echo /opt/hostedtoolcache
+          sudo du -sh /opt/hostedtoolcache/*
+          echo /opt/ghc
+          sudo du -sh /opt/ghc/*
+          echo /var/cache
+          sudo du -sh /var/cache/*
           echo --------------------------------
           df -h
+          echo --------------------------------
+          dpkg -l
 
