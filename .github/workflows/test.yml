@@ -15,20 +15,11 @@ jobs:
           echo --------------------------------
           df -h
           echo --------------------------------
-          sudo rm -rf /usr/share/swift 
-          sudo apt-get -y purge 'clang*' 'libclang*' 'llvm-*' 'lld-*' 'lldb-*' 'dotnet-*' 'msbuild*' 'mono*' 'libmono*' esl-erlang 'gfortran-*' 'libgfortran*' google-cloud-sdk 'ghc-*' 'cabal-*' 'zulu-*' 'mongodb-org*'
+          docker image prune --all
+          sudo rm -rf /usr/share/swift /usr/share/dotnet
+          sudo apt-get -y purge 'clang*' 'libclang*' 'llvm-*' 'lld-*' 'lldb-*' 'dotnet-*' 'msbuild*' 'mono*' 'libmono*' ca-certificates-mono esl-erlang 'gfortran-*' 'libgfortran*' google-cloud-sdk 'ghc-*' 'cabal-*' 'zulu-*' 'mongodb-org*'
           sudo apt-get -y autoremove
-          echo --------------------------------
-          echo /usr/local
-          sudo du -sh /usr/local/*
-          echo /usr/share
-          sudo du -sh /usr/share/*
-          echo /opt/hostedtoolcache
-          sudo du -sh /opt/hostedtoolcache/*
-          echo /opt
-          sudo du -sh /opt/*
-          echo /var/cache
-          sudo du -sh /var/cache/*
+          sudo apt-get clean
           echo --------------------------------
           df -h
 
