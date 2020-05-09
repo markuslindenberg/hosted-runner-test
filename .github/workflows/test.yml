@@ -1,0 +1,19 @@
+name: test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Test stuff
+        run: |
+          echo "::stop-commands::ACbGa0XUVqRf9pHUWRbL"
+          pwd
+          ls -l
+          mount
+          df -h
+
