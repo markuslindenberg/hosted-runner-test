@@ -15,5 +15,7 @@ jobs:
           pwd
           ls -l
           mount
+          docker images -a
           df -h
+          sudo du -sh /*
 
