@@ -20,6 +20,8 @@ jobs:
           echo --------------------------------
           docker images -a
           echo --------------------------------
+          snap list --all
+          echo --------------------------------
           echo /usr
           sudo du -sh /usr/*
           echo /opt
