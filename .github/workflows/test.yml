@@ -16,7 +16,8 @@ jobs:
           df -h
           echo --------------------------------
           sudo rm -rf /usr/share/swift 
-          sudo apt-get -y purge ~n^clang ~n^libclang ~n^dotnet- ~n^msbuild ~n^mono ~n^libmono esl-erlang ~n^gfortran- ~n^libgfortran google-cloud-sdk ~n^ghc- ~n^cabal- ~n^zulu- ~n^mongodb-org 
+          sudo apt-get -y purge 'clang*' 'libclang*' 'llvm-*' 'lld-*' 'lldb-*' 'dotnet-*' 'msbuild*' 'mono*' 'libmono*' esl-erlang 'gfortran-*' 'libgfortran*' google-cloud-sdk 'ghc-*' 'cabal-*' 'zulu-*' 'mongodb-org*'
+          sudo apt-get -y autoremove
           echo --------------------------------
           echo /usr/local
           sudo du -sh /usr/local/*
