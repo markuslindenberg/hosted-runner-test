@@ -15,18 +15,19 @@ jobs:
           echo --------------------------------
           df -h
           echo --------------------------------
+          sudo rm -rf /usr/share/swift 
+          sudo apt-get -y purge ~n^clang ~n^libclang ~n^dotnet- ~n^msbuild ~n^mono ~n^libmono esl-erlang ~n^gfortran- ~n^libgfortran google-cloud-sdk ~n^ghc- ~n^cabal- ~n^zulu- ~n^mongodb-org 
+          echo --------------------------------
           echo /usr/local
           sudo du -sh /usr/local/*
           echo /usr/share
           sudo du -sh /usr/share/*
           echo /opt/hostedtoolcache
           sudo du -sh /opt/hostedtoolcache/*
-          echo /opt/ghc
-          sudo du -sh /opt/ghc/*
+          echo /opt
+          sudo du -sh /opt/*
           echo /var/cache
           sudo du -sh /var/cache/*
           echo --------------------------------
           df -h
-          echo --------------------------------
-          dpkg -l
 
